@@ -252,9 +252,24 @@ html {
     font-size:55%;
 }
 
+.acontact {
+  font-size: 3vh;
+}
+
 .about {
   min-height: 100vh;
   /* padding: 10rem 7% 1.4rem; */
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('/asset/image/rotiultah.jpg');
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center;
+  position: relative;
 }
 
 
