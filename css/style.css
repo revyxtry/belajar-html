@@ -252,6 +252,13 @@ html {
     font-size:55%;
 }
 
+.about {
+  min-height: 100vh;
+  /* padding: 10rem 7% 1.4rem; */
+}
+
+
+
 }
 /* Modal Background */
 .modal.fade {
