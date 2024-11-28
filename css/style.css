@@ -1,0 +1,410 @@
+:root{
+--primary: #051efa;
+--bg: rgb(6, 6, 6);
+}
+
+@font-face {
+    font-family: 'faculty_glyphic';
+    src: url('asset/font/Faculty_Glyphic/FacultyGlyphic-Regular.ttf');
+}
+@font-face {
+    font-family: 'nova';
+    src: url('/asset/font/Nova_Flat/NovaFlat-Regular.ttf');
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+font-family: 'faculty_glyphic', sans-serif;
+background-color: var(--bg);
+color: #fff;
+/* min-height: 3000px; */
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1,4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #383e73;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+nav  .navbar-logo {
+    font-family: 'nova';
+    font-size: 2rem;
+    font-weight:700;
+    color:#fff;
+}
+
+nav  .navbar-logo span {
+color: var(--primary);
+}
+
+nav .navbar-nav a{
+    color:#fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+nav .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+nav .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform:scaleX(0);
+    transition: 0.2s linear;
+}
+
+nav .navbar-nav a:hover::after {
+ transform: scaleX(0.5);
+}
+
+nav .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+nav .navbar-extra a:hover {
+    color: var(--primary)
+}
+
+#menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('/asset/image/headr-bg.jpeg.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(6, 6, 6,1) 3%, rgba(255,255,255, 0) 25%);
+}
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    line-height: 1.2;
+}
+
+
+
+.hero .content h1 span {
+    color: var(--primary)
+}
+
+.hero .content p {
+    font-family: 'nova';
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.4r;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--primary);
+}
+
+/* About selection */
+
+.about {
+  min-height: 100vh;
+  /* padding: 10rem 7% 1.4rem; */
+}
+.about h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  /* margin-bottom: 3rem; */
+}
+.about h1 span {
+  color: var(--primary)
+}
+.about h2  {
+  text-align: center;
+  font-size: 2.6rem;
+  /* margin-bottom: 3rem; */
+
+ }
+ .about h2 {
+  color: var(--primary)
+ }
+/* Contact Section start */
+.contact {
+  text-align: center;
+  /* padding: 30px; */
+  min-height: 90vh;
+  background-color: rgb(25, 35, 36);
+}
+.about::before
+{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(25, 35, 36) 3%, rgba(255,255,255, 0) 25%);
+}
+.contact h1{
+  color: var(--primary);
+  font-size: 2.6rem;
+}
+
+.contact h1 span {
+  color: white;
+}
+/* Contact section end */
+
+/* Media Queries */
+
+/* Laptop */
+/* @media (max-width: 1366px) {
+    html {
+        font-size: 75;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5;
+    }
+    #menu{
+        display: inline-block;
+        }
+    
+        .navbar .navbar-nav {
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background-color: #fff;
+            width: 30rem;
+            height: 100vh;
+            transition: 0.3s;
+        }
+    
+        .navbar .navbar-nav.active {
+            right: 0;
+        }
+    
+        .navbar .navbar-nav a {
+            color: var(--bg);
+            display: block;
+            margin: 1.5rem;
+            padding: 0.5;
+            font-size: 2rem;
+        }
+    
+        .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+        
+        }
+        .navbar .navbar-nav a:hover:after {
+            transform: scaleX(0.2)
+    }
+}
+   
+/* MObile Phone */
+@media (max-width: 450px) {
+html {
+    font-size:55%;
+}
+
+}
+/* Modal Background */
+.modal.fade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparan hitam */
+    z-index: 1050;
+   
+  }
+  
+  /* Modal Dialog */
+  .modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal using translate */
+    width: 100%;
+    max-width: 600px; /* Set a max-width for the modal */
+    margin: 0;
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .modal-header .btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    overflow-y: auto;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  
+  /* Buttons */
+  .modal-footer .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .modal-footer .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .modal-footer .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .modal-body .row {
+    display: flex; /* Mengaktifkan flexbox */
+    flex-wrap: wrap; /* Membungkus kolom jika tidak muat */
+    gap: 10px; /* Jarak antar kolom */
+    justify-content: center; /* Meratakan kolom secara horizontal */
+  }
+  
+  .modal-body .row .col {
+    flex: 1 1 calc(33.333% - 10px); /* Setiap kolom mengambil 1/3 lebar baris, dikurangi jarak antar kolom */
+    max-width: calc(33.333% - 10px); /* Membatasi lebar maksimum kolom agar tetap 3 per baris */
+    display: flex;
+    justify-content: center; /* Memusatkan konten kolom secara horizontal */
+    align-items: center; /* Memusatkan konten kolom secara vertikal */
+    background-color: #f9f9f9; /* Warna latar belakang kolom */
+    border: 1px solid #ddd; /* Batas tipis di sekitar kolom */
+    border-radius: 8px; /* Membuat sudut kolom melengkung */
+    padding: 10px; /* Ruang di dalam kolom */
+    text-align: center;
+    box-sizing: border-box; /* Menjaga padding dan border tidak mempengaruhi lebar kolom */
+  }
+  
+  .modal-body .row .col img {
+    max-width: 100%; /* Membatasi gambar agar tidak melebihi lebar kolom */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 5px; /* Sudut gambar melengkung */
+    overflow-y: auto;
+  }
+  
+  /* Zoom Overlay */
+.zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1060;
+    display: none; /* Default hidden */
+  }
+  
+  .zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  
